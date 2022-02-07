@@ -9,6 +9,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Button startButton;
     [SerializeField] private Button openCreditsButton;
     [SerializeField] private Button closeCreditsButton;
+    [SerializeField] private Button platformerButton;
     [SerializeField] private GameObject creditsUI;
 
     void Start()
@@ -31,5 +32,9 @@ public class MainMenuManager : MonoBehaviour
                 LoadingScreen.LoadScene("gun");
             });
 
+        platformerButton.onClick.AddListener(
+            () => {
+            LoadingScreen.LoadScene("NotQuitePlatformer");
+        });
     }
 }
