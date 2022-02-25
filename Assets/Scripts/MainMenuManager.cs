@@ -12,6 +12,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Button platformerButton;
     [SerializeField] private Button ThreeDSpawnButton;
     [SerializeField] private Button PongGameButton;
+    [SerializeField] private Button FPSButton;
     [SerializeField] private GameObject creditsUI;
 
     void Start()
@@ -47,6 +48,11 @@ public class MainMenuManager : MonoBehaviour
         PongGameButton.onClick.AddListener(
             () => {
                 LoadingScreen.LoadScene("Pong");
+            });
+
+        FPSButton.onClick.AddListener(
+            () => {
+                LoadingScreen.LoadScene("FPS");
             });
     }
 }
